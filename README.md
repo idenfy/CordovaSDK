@@ -1,6 +1,6 @@
 ## Table of contents
 - [Getting started](#getting-started)
-    - [1. Obtaining an authentication token](#1-obtaining-an-authentication-token)
+    - [1. Obtaining an identification token](#1-obtaining-an-identification-token)
     - [2. Adding Idenfy Cordova SDK](#2-adding-idenfy-cordova-sdk)
         - [2.1 Availability information & new project setup](#21-availability-information--new-project-setup)
         - [2.2 Adding SDK dependency through cordova CLI](#22-adding-sdk-dependency-through-cordova-cli)
@@ -15,9 +15,9 @@
 
 The **IdenfySdkPlugin** is an official Cordova plugin, which provides an easier integration of iDenfy KYC services.
 
-### 1. Obtaining an authentication token
+### 1. Obtaining an identification token
 
-The SDK requires token for starting initialization. [Token generation guide](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
+The SDK requires an identification token for starting initialization. [Token generation guide](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
 ### 2. Adding Idenfy Cordova SDK
 #### 2.1 Availability information & new project setup
 Minimum required versions by the platform:
@@ -37,17 +37,18 @@ $ cordova create hello com.example.hello HelloWorld
 
 Navigate to the root directory of your Cordova project. The rest of this second section will assume you are in the root directory. 
 
-Add **IdenfySdkPlugin folder** to the root of the folder.
+Copy **IdenfySdkPlugin folder** from this repository and add it to the root of your project.
 Run the following command:
 
 ```shell
 $ cordova plugin add IdenfySdkPlugin
 ```
 
-If you need to remove plugin, run the following command:
+If you need to remove the plugin, run the following command:
 ```shell
 $ cordova plugin rm com.idenfy.idenfysdkcordovaplugin
 ```
+
 #### 2.3 Configure IOS project
 
 `NSCameraUsageDescription' must be provided in the application's 'Info.plist' file:
@@ -62,7 +63,7 @@ After successful integration you should be able to call IdenfySdkPlugin.startIde
 
 If project is not successfully compiled or runtime issues occurs, make sure you have followed the steps. For better understanding you may check at the sample app in this repository.
 
-Once you have an [authentication token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:
+Once you have an [identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:
 
 
 ```javascript
