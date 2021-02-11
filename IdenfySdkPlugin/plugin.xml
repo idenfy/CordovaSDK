@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.idenfy.idenfysdkcordovaplugin"
+        version="1.0.0">
+    <name>IdenfySdk</name>
+    <description>IdenfySdk Cordova</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, idenfy</keywords>
+    <repo/>
+    <issue/>
+
+    <js-module src="www/IdenfySdkPlugin.js" name="IdenfySdkPlugin">
+        <clobbers target="IdenfySdkPlugin"/>
+    </js-module>
+
+    <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    <dependency id="cordova-plugin-cocoapod-support"/>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IdenfySdkPlugin">
+                <param name="android-package" value="com.idenfy.idenfysdkcordovaplugin.IdenfySdkPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/IdenfySdkPlugin.java" target-dir="src/com/idenfy/idenfysdkcordovaplugin/IdenfySdkPlugin" />
+        <source-file src="src/android/colors_v2.xml" target-dir="res/values"/>
+        <framework src="src/android/idenfySdk.gradle" custom="true" type="gradleReference"/>
+    </platform>
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="IdenfySdkPlugin">
+                <param name="ios-package" value="IdenfySdkPlugin"/>
+            </feature>
+        </config-file>
+        <pods-config ios-min-version="9.0" use-frameworks="true">
+        </pods-config>
+        <pod name="MaterialComponents/ActivityIndicator"/>
+        <pod name="iDenfySDK/iDenfyLiveness" spec="6.0.0"/>
+        <source-file src="src/ios/IdenfySdkPlugin.swift"/>
+        <framework src="iDenfySDK/iDenfyLiveness" type="podspec" spec="6.0.0"/>
+    </platform>
+
+</plugin>
