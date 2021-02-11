@@ -36,11 +36,12 @@ $ cordova create hello com.example.hello HelloWorld
 #### 2.2 Adding SDK dependency through cordova CLI
 
 Navigate to the root directory of your Cordova project. The rest of this second section will assume you are in the root directory. 
-Add IdenfySdkPlugin folder to the root of the folder.
+
+Add **IdenfySdkPlugin folder** to the root of the folder.
 Run the following command:
 
 ```shell
-$ cordova plugin add idenfySdkPlugin
+$ cordova plugin add IdenfySdkPlugin
 ```
 
 If you need to remove plugin, run the following command:
@@ -122,10 +123,10 @@ For better customization we suggest using the [immediate redirect feature ](#cus
 Currently, this cordova plugin does not provide customization options via Javascript code directly. For any additional SDK customization you should edit native code inside of the plugin.
 
 **Android customization:**
-Follow [Android native SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md#customizing-sdk-v2-optional) guide and edit **IdenfyReactNativeModule.kt**.
+Follow [Android native SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md#customizing-sdk-v2-optional) guide and edit **IdenfySdkPlugin.java**.
 
 **IOS customization:**
-Follow [IOS native SDK guide](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md#customizing-sdk-v2-optional) and edit **IdenfyReactNative.swift**.
+Follow [IOS native SDK guide](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md#customizing-sdk-v2-optional) and edit **IdenfySdkPlugin.swift**.
 
 ## SDK Integration tutorials
 For more information visit [SDK integration tutorials](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/mobile-sdk-tutorials.md).
