@@ -4,7 +4,8 @@
     - [2. Adding Idenfy Cordova SDK](#2-adding-idenfy-cordova-sdk)
         - [2.1 Availability information & new project setup](#21-availability-information--new-project-setup)
         - [2.2 Adding SDK dependency through cordova CLI](#22-adding-sdk-dependency-through-cordova-cli)
-        - [2.3 Configure IOS project](#23-configure-ios-project)
+        = [2.3 Adding SDK dependency through npm](#23-adding-sdk-dependency-through-npm)
+        - [2.4 Configure IOS project](#24-configure-ios-project)
 *   [Usage](#usage)
 *   [Callbacks](#callbacks)
 *   [Additional customization](#additional-customization)
@@ -33,6 +34,7 @@ Once the setup completed successfully, you can initialize a new project with CLI
 $ cordova create hello com.example.hello HelloWorld
 ```
 
+
 #### 2.2 Adding SDK dependency through cordova CLI
 
 Navigate to the root directory of your Cordova project. The rest of this second section will assume you are in the root directory. 
@@ -49,7 +51,12 @@ If you need to remove the plugin, run the following command:
 $ cordova plugin rm com.idenfy.idenfysdkcordovaplugin
 ```
 
-#### 2.3 Configure IOS project
+#### 2.3 Adding SDK dependency through npm
+We are planning to release an official npm Cordova plugin for easier CLI integration, which will not require copying a folder to your root project directory.
+
+Coming soon...
+
+#### 2.4 Configure IOS project
 
 `NSCameraUsageDescription' must be provided in the application's 'Info.plist' file:
 ```xml
@@ -59,9 +66,9 @@ $ cordova plugin rm com.idenfy.idenfysdkcordovaplugin
 
 ## Usage
 
-After successful integration you should be able to call IdenfySdkPlugin.startIdentification method.
+After successful integration, you should be able to call IdenfySdkPlugin.startIdentification method.
 
-If project is not successfully compiled or runtime issues occurs, make sure you have followed the steps. For better understanding you may check at the sample app in this repository.
+If the project is not successfully compiled or runtime issues occur, make sure you have followed the steps. For better understanding, you may check the sample app in this repository.
 
 Once you have an [identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:
 
@@ -90,7 +97,7 @@ IdenfySdkPlugin.startIdentification(
         }
     );
 ````
-Result will have a following JSON structure:
+The result will have the following JSON structure:
 
 ```javascript
 {
@@ -118,10 +125,10 @@ Information about the IdenfyIdentificationResult **manualIdentificationStatus** 
 
 *Note
 The manualIdentificationStatus status always returns INACTIVE status, unless your system implements manual identification callback, but does not create **a separate waiting screen** for indicating about the ongoing manual identity verification process.
-For better customization we suggest using the [immediate redirect feature ](#customizing-results-callbacks-v2-optional). As a result, the user will not see an automatic identification status, provided by iDenfy service. The SDK will be closed while showing loading indicators.
+For better customization we suggest using the [immediate redirect feature ](#customizing-results-callbacks-v2-optional). As a result, the user will not see an automatic identification status, provided by the iDenfy service. The SDK will be closed while showing loading indicators.
 
 ## Additional customization
-Currently, this cordova plugin does not provide customization options via Javascript code directly. For any additional SDK customization you should edit native code inside of the plugin.
+Currently, this Cordova plugin does not provide customization options via Javascript code directly. For any additional SDK customization, you should edit the native code inside of the plugin.
 
 **Android customization:**
 Follow [Android native SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md#customizing-sdk-v2-optional) guide and edit **IdenfySdkPlugin.java**.
