@@ -9,8 +9,8 @@ repositories{
 }
 
 dependencies {
-  implementation 'idenfySdk:com.idenfy.idenfySdk:4.2.0'
-  implementation 'idenfySdk:com.idenfy.idenfySdk.idenfyliveness:4.2.0'
+  implementation 'idenfySdk:com.idenfy.idenfySdk:5.1.1'
+  implementation 'idenfySdk:com.idenfy.idenfySdk.idenfyliveness:5.1.1'
   implementation 'com.google.code.gson:gson:2.8.6'
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.idenfy.idenfysdkcordovaplugin"
-        version="1.0.0">
+        version="1.1.0">
     <name>IdenfySdk</name>
     <description>IdenfySdk Cordova</description>
     <license>Apache 2.0</license>
@@ -37,9 +37,9 @@
         <pods-config ios-min-version="9.0" use-frameworks="true">
         </pods-config>
         <pod name="MaterialComponents/ActivityIndicator"/>
-        <pod name="iDenfySDK/iDenfyLiveness" spec="6.0.0"/>
+        <pod name="iDenfySDK/iDenfyLiveness" spec="6.3.0"/>
         <source-file src="src/ios/IdenfySdkPlugin.swift"/>
-        <framework src="iDenfySDK/iDenfyLiveness" type="podspec" spec="6.0.0"/>
+        <framework src="iDenfySDK/iDenfyLiveness" type="podspec" spec="6.3.0"/>
     </platform>
 
 </plugin>
