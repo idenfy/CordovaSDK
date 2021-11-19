@@ -1,5 +1,5 @@
 import iDenfySDK
-import MaterialComponents
+import Foundation
 @objc(IdenfySdkPlugin) class IdenfySdkPlugin: CDVPlugin {
     @objc(idenfyInitialize:)
     func idenfyInitialize(command: CDVInvokedUrlCommand) {

@@ -64,10 +64,63 @@ Coming soon...
 <string>Required for document and facial capture</string>
 ```
 
+Also navigate to platforms/ios/Podfile file and add the following post_install script:
+
+```ruby
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == "ZIPFoundation" || target.name == "lottie-ios"
+          target.build_configurations.each do |config|
+            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+      end
+    end
+end
+```
+
+The sample app uses the following Podfile structure:
+```ruby
+platform :ios, '10.0'
+use_frameworks!
+target 'CordovaSDK' do
+pod 'iDenfySDK/iDenfyLiveness', '6.7.1'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == "ZIPFoundation" || target.name == "lottie-ios"
+          target.build_configurations.each do |config|
+            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
+      end
+    end
+end
+```
+
 ## Usage
 
 After successful integration, you should be able to call IdenfySdkPlugin.startIdentification method.
+You can run on IOS with:
+```shell
+$ cordova build ios
+$ cordova run ios
+```
+If you face issues, try these commands:
+```shell
+$ cordova platform remove ios
+$ cordova platform add ios
+```
 
+On Android you would run it like this:
+```shell
+$ cordova run android
+```
+
+If you face issues, try these commands:
+```shell
+$ cordova platform remove android
+$ cordova platform add android
+```
 If the project is not successfully compiled or runtime issues occur, make sure you have followed the steps. For better understanding, you may check the sample app in this repository.
 
 Once you have an [identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:

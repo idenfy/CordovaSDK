@@ -43,6 +43,7 @@ var app = {
 };
 
 function presentIdenfySDK() {
+    console.log('clicked presentIdenfySDK');
     IdenfySdkPlugin.startIdentification(
         'AUTH_TOKEN',
         function (result) {
