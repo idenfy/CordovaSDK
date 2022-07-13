@@ -23,9 +23,9 @@ The SDK requires an identification token for starting initialization. [Token gen
 #### 2.1 Availability information & new project setup
 Minimum required versions by the platform:
 
-**IOS - 9.00**
+**IOS - 10.00**
 
-**Android - API 19**
+**Android - API 21**
 
 If you are starting a new Cordova project you can follow [environment setup guide](https://cordova.apache.org/docs/en/latest/guide/cli/).
 Once the setup completed successfully, you can initialize a new project with CLI:
@@ -78,12 +78,23 @@ post_install do |installer|
 end
 ```
 
+Then ensure that you **have use_frameworks! added**.
+
+```ruby
+platform :ios, '11.0'
+target 'CordovaSDK' do
+	project 'CordovaSDK.xcodeproj'
+	pod 'iDenfySDK/iDenfyLiveness', '7.4.0'
+  use_frameworks!
+end
+```
 The sample app uses the following Podfile structure:
 ```ruby
-platform :ios, '10.0'
-use_frameworks!
+platform :ios, '11.0'
 target 'CordovaSDK' do
-pod 'iDenfySDK/iDenfyLiveness', '6.7.1'
+	project 'CordovaSDK.xcodeproj'
+	pod 'iDenfySDK/iDenfyLiveness', '7.4.0'
+  use_frameworks!
 end
 
 post_install do |installer|

@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "com.idenfy.idenfysdkcordovaplugin": "file:IdenfySdkPlugin",
-    "cordova-android": "^9.1.0",
+    "cordova-android": "^10.1.2",
     "cordova-ios": "^6.2.0",
     "cordova-plugin-add-swift-support-modern": "^2.0.3",
     "cordova-plugin-cocoapod-support": "^1.6.2",
@@ -26,8 +26,8 @@
       "com.idenfy.idenfysdkcordovaplugin": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

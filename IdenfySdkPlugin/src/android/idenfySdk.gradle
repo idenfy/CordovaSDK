@@ -9,7 +9,7 @@ repositories{
 }
 
 dependencies {
-  implementation 'com.github.idenfy:sdk-api:5.4.0'
+  implementation 'com.github.idenfy:sdk-api:7.4.1'
   implementation 'com.google.code.gson:gson:2.8.6'
 }
 
