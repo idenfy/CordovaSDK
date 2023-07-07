@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.idenfy.idenfysdkcordovaplugin"
-        version="1.4.0">
+        version="2.0.0">
     <name>IdenfySdk</name>
     <description>IdenfySdk Cordova</description>
     <license>Apache 2.0</license>
@@ -17,7 +17,6 @@
 
     <!-- android -->
     <platform name="android">
-        <preference name="android-targetSdkVersion" value="30" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="IdenfySdkPlugin">
                 <param name="android-package" value="com.idenfy.idenfysdkcordovaplugin.IdenfySdkPlugin"/>
@@ -34,11 +33,10 @@
                 <param name="ios-package" value="IdenfySdkPlugin"/>
             </feature>
         </config-file>
-        <pods-config ios-min-version="10.0" use-frameworks="true">
+        <pods-config ios-min-version="11.0" use-frameworks="true">
         </pods-config>
-        <pod name="iDenfySDK/iDenfyLiveness" spec="7.4.0"/>
+        <pod name="iDenfySDK-Static/iDenfyLiveness-Static" spec="8.0.0"/>
         <source-file src="src/ios/IdenfySdkPlugin.swift"/>
-        <framework src="iDenfySDK/iDenfyLiveness" type="podspec" spec="7.4.0"/>
     </platform>
 
 </plugin>
