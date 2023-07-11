@@ -68,24 +68,26 @@ Also navigate to platforms/ios/Podfile file and add the following post_install s
 
 ```ruby
 post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if target.name == "ZIPFoundation" || target.name == "lottie-ios"
-          target.build_configurations.each do |config|
-            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        end
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      if target.name == "lottie-ios"
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
     end
+  end
 end
 ```
 
-Then ensure that you **have use_frameworks! added**.
+Then ensure that you **have use_frameworks! REMOVED**.
 
 ```ruby
 platform :ios, '11.0'
 target 'CordovaSDK' do
 	project 'CordovaSDK.xcodeproj'
-	pod 'iDenfySDK/iDenfyLiveness', '7.4.0'
-  use_frameworks!
+	pod 'iDenfySDK/iDenfyLiveness', '8.1.0'
 end
 ```
 The sample app uses the following Podfile structure:
@@ -93,18 +95,20 @@ The sample app uses the following Podfile structure:
 platform :ios, '11.0'
 target 'CordovaSDK' do
 	project 'CordovaSDK.xcodeproj'
-	pod 'iDenfySDK/iDenfyLiveness', '7.4.0'
-  use_frameworks!
+	pod 'iDenfySDK/iDenfyLiveness', '8.1.0'
 end
 
 post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if target.name == "ZIPFoundation" || target.name == "lottie-ios"
-          target.build_configurations.each do |config|
-            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        end
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      if target.name == "lottie-ios"
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
     end
+  end
 end
 ```
 
