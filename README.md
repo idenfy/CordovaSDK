@@ -87,7 +87,7 @@ Then ensure that you **have use_frameworks! REMOVED**.
 platform :ios, '11.0'
 target 'CordovaSDK' do
 	project 'CordovaSDK.xcodeproj'
-	pod 'iDenfySDK/iDenfyLiveness', '8.1.0'
+	pod 'iDenfySDK-Static/iDenfyLiveness-Static', '8.0.0'
 end
 ```
 The sample app uses the following Podfile structure:
@@ -95,7 +95,7 @@ The sample app uses the following Podfile structure:
 platform :ios, '11.0'
 target 'CordovaSDK' do
 	project 'CordovaSDK.xcodeproj'
-	pod 'iDenfySDK/iDenfyLiveness', '8.1.0'
+	pod 'iDenfySDK-Static/iDenfyLiveness-Static', '8.0.0'
 end
 
 post_install do |installer|
