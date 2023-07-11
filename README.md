@@ -23,7 +23,7 @@ The SDK requires an identification token for starting initialization. [Token gen
 #### 2.1 Availability information & new project setup
 Minimum required versions by the platform:
 
-**IOS - 10.00**
+**IOS - 11.00**
 
 **Android - API 21**
 
