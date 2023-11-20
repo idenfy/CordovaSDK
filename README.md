@@ -18,7 +18,7 @@ The **IdenfySdkPlugin** is an official Cordova plugin, which provides an easier 
 
 ### 1. Obtaining an identification token
 
-The SDK requires an identification token for starting initialization. [Token generation guide](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
+The SDK requires an identification token for starting initialization. [Token generation guide](https://documentation.idenfy.com/API/GeneratingIdentificationToken)
 ### 2. Adding Idenfy Cordova SDK
 #### 2.1 Availability information & new project setup
 Minimum required versions by the platform:
@@ -138,7 +138,7 @@ $ cordova platform add android
 ```
 If the project is not successfully compiled or runtime issues occur, make sure you have followed the steps. For better understanding, you may check the sample app in this repository.
 
-Once you have an [identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:
+Once you have an [identification token](https://documentation.idenfy.com/API/GeneratingIdentificationToken), you can initialize the idenfy cordova plugin, by calling IdenfySdkPlugin.startIdentification with provided authToken:
 
 
 ```javascript
@@ -193,19 +193,16 @@ Information about the IdenfyIdentificationResult **manualIdentificationStatus** 
 
 *Note
 The manualIdentificationStatus status always returns INACTIVE status, unless your system implements manual identification callback, but does not create **a separate waiting screen** for indicating about the ongoing manual identity verification process.
-For better customization we suggest using the [immediate redirect feature ](#customizing-results-callbacks-v2-optional). As a result, the user will not see an automatic identification status, provided by the iDenfy service. The SDK will be closed while showing loading indicators.
+For better customization we suggest using the immediate redirect feature. As a result, the user will not see an automatic identification status, provided by the iDenfy service. The SDK will be closed while showing loading indicators.
 
 ## Additional customization
 Currently, this Cordova plugin does not provide customization options via Javascript code directly. For any additional SDK customization, you should edit the native code inside of the plugin.
 
 **Android customization:**
-Follow [Android native SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md#customizing-sdk-v2-optional) guide and edit **IdenfySdkPlugin.java**.
+Follow [Android native SDK](https://documentation.idenfy.com/mobile/Android/android-sdk#customizing-sdk-flow-optional) guide and edit **IdenfySdkPlugin.java**.
 
 **IOS customization:**
-Follow [IOS native SDK guide](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md#customizing-sdk-v2-optional) and edit **IdenfySdkPlugin.swift**.
-
-## SDK Integration tutorials
-For more information visit [SDK integration tutorials](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/mobile-sdk-tutorials.md).
+Follow [IOS native SDK guide](https://documentation.idenfy.com/mobile/iOS/ios-sdk) and edit **IdenfySdkPlugin.swift**.
 
 
 
