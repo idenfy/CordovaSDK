@@ -4,7 +4,7 @@
     - [2. Adding Idenfy Cordova SDK](#2-adding-idenfy-cordova-sdk)
         - [2.1 Availability information & new project setup](#21-availability-information--new-project-setup)
         - [2.2 Adding SDK dependency through cordova CLI](#22-adding-sdk-dependency-through-cordova-cli)
-        = [2.3 Adding SDK dependency through npm](#23-adding-sdk-dependency-through-npm)
+        - [2.3 Adding SDK dependency through npm](#23-adding-sdk-dependency-through-npm)
         - [2.4 Configure IOS project](#24-configure-ios-project)
 *   [Usage](#usage)
 *   [Callbacks](#callbacks)
