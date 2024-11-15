@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "name": "com.idenfy.idenfysdkcordovaplugin",
   "cordova_name": "IdenfySdk",
   "description": "IdenfySdk Cordova",
@@ -11,7 +11,7 @@
     "device"
   ],
   "dependencies": {
-    "cordova-ios": "^5.0.1",
+    "cordova-ios": "^7.1.1",
     "cordova-plugin-add-swift-support": "2.0.2"
   },
   "cordova": {

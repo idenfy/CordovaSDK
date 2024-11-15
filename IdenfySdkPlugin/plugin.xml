@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.idenfy.idenfysdkcordovaplugin"
-        version="2.0.0">
+        version="2.0.1">
     <name>IdenfySdk</name>
     <description>IdenfySdk Cordova</description>
     <license>Apache 2.0</license>
@@ -33,9 +33,14 @@
                 <param name="ios-package" value="IdenfySdkPlugin"/>
             </feature>
         </config-file>
-        <pods-config ios-min-version="11.0" use-frameworks="true">
-        </pods-config>
-        <pod name="iDenfySDK-Static/iDenfyLiveness-Static" spec="8.0.0"/>
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="iDenfySDK-Static/iDenfyLiveness-Static" spec="8.5.7" swift-version="6.0"/>
+            </pods>
+        </podspec>        
         <source-file src="src/ios/IdenfySdkPlugin.swift"/>
     </platform>
 

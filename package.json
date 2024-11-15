@@ -1,7 +1,7 @@
 {
   "name": "com.idenfy.cordovasdk",
   "displayName": "CordovaSDK",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "com.idenfy.idenfysdkcordovaplugin": "file:IdenfySdkPlugin",
-    "cordova-android": "^12.0.0",
-    "cordova-ios": "^6.2.0",
+    "cordova-android": "^13.0.0",
     "cordova-plugin-add-swift-support-modern": "^2.0.3",
     "cordova-plugin-cocoapod-support": "^1.6.2",
     "cordova-plugin-whitelist": "^1.3.5"
@@ -26,7 +25,8 @@
       "com.idenfy.idenfysdkcordovaplugin": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

@@ -5,11 +5,12 @@ repositories{
    }
    repositories {
        maven { url 'https://jitpack.io' }
+       maven { url 'https://developer.huawei.com/repo/' }
    }
 }
 
 dependencies {
-  implementation 'com.github.idenfy:sdk-api:7.4.1'
+  implementation 'com.github.idenfy:sdk-api:8.5.2'
   implementation 'com.google.code.gson:gson:2.8.6'
 }
 

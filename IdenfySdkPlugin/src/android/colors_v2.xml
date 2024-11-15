@@ -20,4 +20,16 @@
     <color name="idenfyDrawerCurrentInstructionIndicatorColorV2">@color/idenfyMainColorV2</color>
     <color name="idenfyDrawerInstructionControlsTintColorV2">#FFFFFF</color>
     <color name="idenfyPhotoResultDetailsCardBackgroundColorV2">#D9DFFC</color>
+    <color name="idenfyRedColorV2">#F44336</color>
+    <color name="idenfyErrorRedColorV2">#C1170B</color>
+    <color name="idenfyErrorLightRedColorV2">#FFEBEE</color>
+    <color name="idenfyGreenColorV2">#9CEE13</color>
+    <color name="idenfyGrayColorV2">#CFD8DC</color>
+    <color name="idenfyTransparentCameraOverlay">#60ffffff</color>
+    <color name="idenfyHelpSheetOverlay">#99000000</color>
+    <color name="idenfyLivenessBackgroundColor">#ffffff</color>
+    <color name="idenfyBlack">#000000</color>
+    <color name="idenfyWhite">#ffffff</color>
+    <color name="idenfyWarningLightYellowV2">#FFF3E0</color>
+    <color name="idenfyWarningYellowV2">#FF9800</color>
 </resources>
